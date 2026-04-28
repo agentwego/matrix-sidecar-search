@@ -14,6 +14,8 @@ class Settings(BaseSettings):
     meili_api_key: str | None = None
     index_uid: str = "matrix_events"
     batch_size: int = 500
+    poll_interval_seconds: float = 5.0
+    once_cursor: int = 0
     allow_rw_database: bool = False
 
     @field_validator("database_dsn")
